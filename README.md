@@ -30,6 +30,7 @@ ValidCV SKU identity are under design deliberation and consist of the following 
 VCV.x.y.z.Industry-code.Domain-sku
 ```
 Explanation:
+```
 VCV: Signature
 x.y.z: Version
         x: YYYY
@@ -37,8 +38,9 @@ x.y.z: Version
         z: Sequence number of release for the month
 Industry-code: As of this writing, based on the ISIC classification
 Domain-sku: Domain specific SKU which can mutate independently of the rest of the schema
-
+```
 Repository organization:
+```
 Top-level directory - vcv
 1st level sub-directory - x.y.z corresponds to the version
 2nd level sub-directory - industry-code
@@ -48,6 +50,7 @@ Description: TBD (TODO)
 NOTICE: These schema may change without notice
 
 tools - automation tools
+```
 
 ## Legal Notice
 ValiCV™ is a trademark of Abhishek Choudhary and others 
