@@ -20,10 +20,14 @@ fi
 # AYESEC:PREV_SHS('18 lines')=9da1fc9afc1b85e1e81e78a53f97d4436d886182eec170ddd6c78ec71e64113d9ade4fd1bf969ed5bbe62baed9a575d2b5e3ccdc0383c27eb7a4b6bc71965afe
 
 genschema() {
-  for p in $(printf ${3})
+  vcvbased=${1}
+  vcvgroup=${2}
+  shift 2
+  for p in $@
   do
-    mkdir -p ${1}/${2}/${p}
-    echo "# ${1}/${2}/${p}" >>${1}/${2}/${p}/README.md
+    vcvtpath=${vcvbased}/${vcvgroup}/${p}
+    mkdir -p ${vcvtpath}
+    echo "# ${vcvtpath}" >>${vcvtpath}/README.md
   done
 }
 
@@ -31,16 +35,16 @@ sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3} | . /dev/stdin
 pushd ${ver}
   for n in $(find . -type d)
   do
-    for m in 'sense "vision nlp iot analytics"' \
-             'hf "creative emotive empathy"' \
-             'kb "corpus explore"' \
-             'think "assim reduce hypo solve cems cemb"' \
-             'act "manip navig loco comm social trade material"' \
-             'tools "mech elect abstract sw lang q"' \
-             'pol "legal singular life txhx energy"' \
-             'hejlp "food health edu justice livelihood habitat peace"'
+    for m in "sense vision nlp iot analytics" \
+             "hf creative emotive empathy" \
+             "kb corpus explore" \
+             "think assim reduce hypo solve cems cemb" \
+             "act manip navig loco comm social trade material" \
+             "tools mech elect abstract sw lang q" \
+             "pol legal singular life txhx energy" \
+             "hejlp food health edu justice livelihood habitat peace"
     do
-      genschema ${n} ${m}
+      genschema ${n} $(echo ${m})
     done
   done
 popd
