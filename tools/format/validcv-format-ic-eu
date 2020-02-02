@@ -28,6 +28,6 @@ awk 'BEGIN {s=0};
 grep -v '<' | cut -c2- | tr ', ' '#_' |\
 sed 's/^/"/g; s/_$/"/g; s/_-_/","/g' |\
 awk -F',' -vfilter="awk -F'.' '{printf \"\\\\\"\" \$1\$2\$3 \"\\\\\",\"}'" '{system("echo " $1 " | " filter); print $1 "," $2}' |\
-sed 's/^\("\)[A-Z]\([0-9]\)/\1\2/1'
+sed 's/^\("\)[A-Z]\([0-9]\)/\1\2/1' | tail +2
 
 #TODO: Fix errors
