@@ -88,10 +88,12 @@ sourcefrom https://bit.ly/validcv-source-ic-de | sourcefrom https://bit.ly/valid
 
 4. If the output from step 3 looks fine you can proceed with trying out the integration directly
 e.g. Now try to execute the following command - any errors at this stage will need modifications in formatter,
-or may point to a bug in the ValidCV libraries.
+or may point to a bug in the ValidCV libraries. For instance, we needed a few iterations to the get the WZ 2008 format
+correct for the pipeline - had to adjust the initial tail to +14 instead of +10. 
 ```
 sourcefrom http://bit.ly/validcv-ver-pplt ic de 5
 ```
+TODO: RCA needed why that adjustment was needed, could be a bug!
 
 WARNING: Please do not distribute any material where the Copyright information provided is not clear about the rights of distribution, or without permission where one is required. Users may be given directions to manually download the specific object on their own. This defeats automation, however, the original providers legal rights are maintained.
 
