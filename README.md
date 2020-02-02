@@ -52,6 +52,12 @@ NOTICE: These schema may change without notice
 tools - automation tools
 ```
 
+## Development notes
+NOTE: These will be captured in OSTs
+TODO: Intern projects TBD
+
+1. For errors in source encoding go to the deepest level of first failure and fi schema
+
 ## Legal Notice
 ValiCV™ is a trademark of Abhishek Choudhary and others 
 carrying out business as AyeAI Consulting and allied 
