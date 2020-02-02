@@ -21,4 +21,7 @@ fi
 
 # TODO: Make arxiver optional
 export arxiver="https://web.archive.org/web/"
+
+export src_uri=${2}
+
 wget -q -O- ${arxiver}${src_uri}
