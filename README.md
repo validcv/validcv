@@ -95,6 +95,11 @@ sourcefrom http://bit.ly/validcv-ver-pplt ic de 5
 ```
 TODO: RCA needed why that adjustment was needed, could be a bug!
 
+5. Beyond this you could try many other features and integrations available in AyeVDI and AyeAI for a complete 
+cloud based AI and analytics experience. Do try our experimental "systhesis" feature. We aspire to take it to the 
+point of custom "CEMs™ Neuromorphic Quantum Accelerator" - looking forward to your support and participation in the journey
+to Singularity!
+
 WARNING: Please do not distribute any material where the Copyright information provided is not clear about the rights of distribution, or without permission where one is required. Users may be given directions to manually download the specific object on their own. This defeats automation, however, the original providers legal rights are maintained.
 
 WARNING: Please do not share any sensitive personal information. This project is experimntal and we cannot guarantee any compliance of data protection such as GDPR. As of now we are also unable to assure removal of personal data. Please rest assured this is topmost priority and is one of the first avenues of investment, endowment, funding or donation.
