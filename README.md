@@ -58,6 +58,49 @@ TODO: Intern projects TBD
 
 1. For errors in source encoding go to the deepest level of first failure and fi schema
 
+2. To refresh a statistics for a country code use the following construct
+e.g. UN ISIC - 4 digit codes
+```
+sourcefrom http://bit.ly/validcv-ver-pplt ic un 4
+```
+e.g. INDIA NIC - 5 digit codes
+```
+sourcefrom http://bit.ly/validcv-ver-pplt ic in 5
+```
+
+### To enable support for a new country code
+1. Find the source of economic activities, or other statstics, structure
+e.g. Download WZ 2008 structure in CSV format from  https://www.klassifikationsserver.de/klassService/jsp/common/url.jsf?variant=wz2008&lang=EN (wz2008.zip) - also see UN ISIC example for CSV with 4 digit codes, and India NIC example for 5 digit codes
+
+2. Unzip the wz2008.zip file and cat the contents of the structure file to stdout
+e.g. Captured into an OST https://bit.ly/validcv-source-ic-de
+```
+sourcefrom https://bit.ly/validcv-source-ic-de
+```
+
+3. Now write a formatter that will convert the output in a format similar to ISIC CSV txt file
+Note: In case the level lengths do not match up then the three field line may be used. 1 field lines
+get appended to the respective README.md
+e.g. The WZ 2008 formatter has been captured in the OST https://bit.ly/validcv-format-ic-de and may be used together with source OST as below
+```
+sourcefrom https://bit.ly/validcv-source-ic-de | sourcefrom https://bit.ly/validcv-format-ic-de
+```
+
+4. If the output from step 3 looks fine you can proceed with trying out the integration directly
+e.g. Now try to execute the following command - any errors at this stage will need modifications in formatter,
+or may point to a bug in the ValidCV libraries.
+```
+sourcefrom http://bit.ly/validcv-ver-pplt ic de 5
+```
+
+WARNING: Please do not distribute any material where the Copyright information provided is not clear about the rights of distribution, or without permission where one is required. Users may be given directions to manually download the specific object on their own. This defeats automation, however, the original providers legal rights are maintained.
+
+WARNING: Please do not share any sensitive personal information. This project is experimntal and we cannot guarantee any compliance of data protection such as GDPR. As of now we are also unable to assure removal of personal data. Please rest assured this is topmost priority and is one of the first avenues of investment, endowment, funding or donation.
+
+WARNING: This is an experimental system and cannot guarantee any level of accuracy or SLA. The results may be inaccurate and must never be used for any critical or life saving purpose or for any economic activity. The users use this software at their own risk and indemnify the original authors against any losses incurred directly or indirectly by them or by any other 3rd party, including the loss of mental peace, as a result of using this software.
+
+WARNING: These warnings may not be removed from redistribution of this software, if permitted by license, under any circumstances.
+
 ## Legal Notice
 ValiCV™ is a trademark of Abhishek Choudhary and others 
 carrying out business as AyeAI Consulting and allied 
