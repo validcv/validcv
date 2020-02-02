@@ -19,49 +19,28 @@ fi
 # AYESEC:STATUTORY_HEADER_COMPLETED
 # AYESEC:PREV_SHS('18 lines')=9da1fc9afc1b85e1e81e78a53f97d4436d886182eec170ddd6c78ec71e64113d9ade4fd1bf969ed5bbe62baed9a575d2b5e3ccdc0383c27eb7a4b6bc71965afe
 
+genschema() {
+  for n in ${3}
+  do
+    mkdir -p ${1}/${2}/${3}
+    echo "# ${1}/${2}/${3}" >>${1}/${2}/${3}/README.md
+  done
+}
+
 sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3} | . /dev/stdin
 pushd ${ver}
-for n in $(find . -type d)
-do
-  for m in vision nlp iot analytics
+  for n in $(find . -type d)
   do
-    mkdir -p ${n}/sense/${m}
-    echo "# ${n}/sense/${m}"
+    for m in 'sense "vision nlp iot analytics"' \
+             'hf "creative emotive empathy"' \
+             'kb "corpus explore"' \
+             'think "assim reduce hypo solve cems cemb"' \
+             'act "manip navig loco comm social trade material"' \
+             'tools "mech elect abstract sw lang q"' \
+             'pol "legal singular life txhx energy"' \
+             'hejlp "food health edu justice livelihood habitat peace"'
+    do
+      genschema ${n} ${m}
+    done
   done
-  for m in creative emotive empathy
-  do
-    mkdir -p ${n}/hf/${m}
-    echo "# ${n}/hf/${m}"
-  done
-  for m in corpus explore
-  do
-    mkdir -p ${n}/kb/${m}
-    echo "# ${n}/kb/${m}"
-  done
-  for m in assim reduce hypo solve cems cemb
-  do
-    mkdir -p ${n}/think/${m}
-    echo "# ${n}/think/${m}"
-  done
-  for m in manip navig loco comm social trade material
-  do
-    mkdir -p ${n}/act/${m}
-    echo "# ${n}/act/${m}"
-  done
-  for m in mech elect abstract sw lang q
-  do
-    mkdir -p ${n}/tools/${m}
-    echo "# ${n}/tools/${m}"
-  done
-  for m in legal singular life txhx energy
-  do
-    mkdir -p ${n}/pol/${m}
-    echo "# ${n}/pol/${m}"
-  done
-  for m in food health edu justice livelihood habitat peace
-  do
-    mkdir -p ${n}/hejlp/${m}
-    echo "# ${n}/hejlp/${m}"
-  done
-done
 popd
