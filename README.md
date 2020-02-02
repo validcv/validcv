@@ -95,6 +95,16 @@ sourcefrom http://bit.ly/validcv-ver-pplt ic de 5
 ```
 TODO: RCA needed why that adjustment was needed, could be a bug!
 
+Another example that works fine, but needs some debugging - unterminated string error that does not seem to affect end results (try your hands at fixing it before someone else does!)
+e.g. Based on EU NACE codes
+```
+sourcefrom http://bit.ly/valdicv-source-ic-eu | sourcefrom http://bit.ly/validcv-format-ic-eu
+```
+Or, run the complete integration
+```
+sourcefrom http://bit.ly/validcv-ver-pplt ic eu 5
+```
+
 5. Beyond this you could try many other features and integrations available in AyeVDI and AyeAI for a complete 
 cloud based AI and analytics experience. Do try our experimental "systhesis" feature. We aspire to take it to the 
 point of custom "CEMs™ Neuromorphic Quantum Accelerator" - looking forward to your support and participation in the journey
