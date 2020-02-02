@@ -51,7 +51,7 @@ do
   do
     mkdir -p ${n}/pol/${m}
   done
-  for m in health edu justice livelihood peace habitat
+  for m in food health edu justice livelihood habitat peace
   do
     mkdir -p ${n}/hejlp/${m}
   done
