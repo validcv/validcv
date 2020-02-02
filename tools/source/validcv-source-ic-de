@@ -22,12 +22,8 @@ fi
 if [ ! -e wz2008.zip ]
 then
   printf 'Error\n"-1","Error"\n'
-  echo "Please download the wz2008.zip file - csv format complete classification into ${PWD}"
-  echo "See https://www.klassifikationsserver.de/klassService/jsp/common/url.jsf?variant=wz2008&lang=EN"
-  # Kill the pipes
-  printf '\x04\x0a'
-  echo "Please download the wz2008.zip file - csv format complete classification into ${PWD}"
-  echo "See https://www.klassifikationsserver.de/klassService/jsp/common/url.jsf?variant=wz2008&lang=EN"
+  echo "Please download the wz2008.zip file - csv format complete classification into ${PWD}" >&2
+  echo "See https://www.klassifikationsserver.de/klassService/jsp/common/url.jsf?variant=wz2008&lang=EN" >&2
 else
 
   # TODO: Get permission to redistribute the wz2008.zip file
