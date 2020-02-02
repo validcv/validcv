@@ -32,8 +32,8 @@ genschema() {
 }
 
 sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3} | . /dev/stdin
-pushd ${ver}
-  for n in $(find . -type d)
+pushd ${ver}/${2}/${3}
+  for n in $(find . -type d | grep -v '^.$')
   do
     for m in "sense vision nlp iot analytics" \
              "hf creative emotive empathy" \
