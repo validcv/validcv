@@ -21,6 +21,7 @@ fi
 
 # Warning: This file issues an error message and needs to be debugged
 
+echo '"code","code","description"'
 awk 'BEGIN {s=0};
 /<div class="footer">/ {s+=1; next};
 /Page generated on/ {s+=1; next};
