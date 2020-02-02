@@ -23,35 +23,35 @@ sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3} | . /dev/stdin
 pushd ${ver}
 for n in $(find . -type d)
 do
-  for m in "vision nlp iot analytics"
+  for m in vision nlp iot analytics
   do
     mkdir -p ${n}/sense/${m}
   done
-  for m in "creative emotive empathy"
+  for m in creative emotive empathy
   do
     mkdir -p ${n}/hf/${m}
   done
-  for m in "corpus explore"
+  for m in corpus explore
   do
     mkdir -p ${n}/kb/${m}
   done
-  for m in "assim reduce hypo solve cems cemb"
+  for m in assim reduce hypo solve cems cemb
   do
     mkdir -p ${n}/think/${m}
   done
-  for m in "manip navig loco comm social trade material"
+  for m in manip navig loco comm social trade material
   do
     mkdir -p ${n}/act/${m}
   done
-  for m in "mech elect abstract sw lang q"
+  for m in mech elect abstract sw lang q
   do
     mkdir -p ${n}/tools/${m}
   done
-  for m in "legal singular life txhx energy"
+  for m in legal singular life txhx energy
   do
     mkdir -p ${n}/pol/${m}
   done
-  for m in "health edu justice livelihood peace habitat"
+  for m in health edu justice livelihood peace habitat
   do
     mkdir -p ${n}/hejlp/${m}
   done
