@@ -25,6 +25,7 @@ fi
 export ver=${vcvverqual}
 echo "if [ ! -e ${ver}/validcv-source-${2}-${3} ]"
 echo "then"
+echo "  mkdir -p ${ver}"
 echo "  wget -q https://bit.ly/validcv-source-${2}-${3} -O${ver}/validcv-source-${2}-${3}"
 echo "fi"
 
