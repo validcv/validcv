@@ -29,9 +29,8 @@ fi
 tail +2 |\
 tr ' ' '_' |\
 sed 's/"//g' |\
-awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'BEGIN {lc=0;plc=0;};
+awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'BEGIN {lc=0;plc=0;based=code;};
   /.*/ { if (NF>1) {
-          based=code;
           pc=code;
           plc=lc;
           lc=length($1);
