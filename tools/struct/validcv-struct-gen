@@ -45,7 +45,7 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'BEGIN {lc=0;plc=0;};
           printf "# "NF " " lc " " code "\n";
           if (plc<lc) {
             printf "pushd " pc "; ";
-          } "
+          }
           if (plc>lc) {
             printf "for n in {1.." plc-lc "}; do popd; done; ";
           }
