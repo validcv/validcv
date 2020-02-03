@@ -20,6 +20,7 @@ fi
 # AYESEC:PREV_SHS('18 lines')=9da1fc9afc1b85e1e81e78a53f97d4436d886182eec170ddd6c78ec71e64113d9ade4fd1bf969ed5bbe62baed9a575d2b5e3ccdc0383c27eb7a4b6bc71965afe
 
 export ver=${ver}
+wget -q https://bit.ly/validcv-source-${2}-${3} -O${ver}
 tail +2 |\
 tr ' ' '_' |\
 sed 's/"//g' |\
@@ -39,7 +40,7 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'BEGIN {lc=0;plc=0;};
           printf "# "NF " " lc " " code "\n";
           if (plc<lc) {
             printf "pushd " pc "; ";
-          }
+          } "
           if (plc>lc) {
             printf "for n in {1.." plc-lc "}; do popd; done; ";
           }
@@ -50,7 +51,7 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'BEGIN {lc=0;plc=0;};
         }
         print "echo \"#" desc "\" | tr \"_#\" \" ,\" >>" code "/README.md;"
         print "echo \"See the following URLs for copyright information\" >>" code "/README.md;"
-        print "wget -O- -q https://bit.ly/validcv-source-" st "-" cc " >>" code "/README.md;"
+        print "cat " code "/validcv-source-" st "-" cc " >>" code "/README.md;"
       };
   END { print "for n in {1.." plc "}; do popd; done; " }'
   
