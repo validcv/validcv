@@ -24,4 +24,7 @@ export arxiver="https://web.archive.org/web/"
 
 src_uri=${2}
 
-wget -q -O- ${arxiver}${src_uri}
+tmp_src=$(tempfile)
+wget -q ${arxiver}${src_uri} -O ${tmp_src}
+
+cat ${tmp_src}
