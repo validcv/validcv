@@ -19,7 +19,7 @@ fi
 # AYESEC:STATUTORY_HEADER_COMPLETED
 # AYESEC:PREV_SHS('18 lines')=9da1fc9afc1b85e1e81e78a53f97d4436d886182eec170ddd6c78ec71e64113d9ade4fd1bf969ed5bbe62baed9a575d2b5e3ccdc0383c27eb7a4b6bc71965afe
 
-ctrl_L=$(printf '\x0c\x00')
+ctrl_L=$(printf '\x0c')
 pdftotext -f 36 -l 137 -layout -raw - - |\
 sed 's/^Other personal service activities$/960 &/g' |\
 sed 's/^6511 Life insurance$/651 Insurance\n&/g' |\
