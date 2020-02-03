@@ -8,7 +8,7 @@ WARNING: ValidCV records are public as of this writing and we cannot offer any f
          the ValidCV records only if feasible and may involve significant costs that the user making
          such request has to bear. AyeAI or its affiliates do not control 3rd party hosted services
          and data passed onto such services by means of storage or communication whether directly or
-         indirectly goes beyond the control of AyeAI and its affiliates. The users eplictly waive any
+         indirectly goes beyond the control of AyeAI and its affiliates. The users explictly waive any
          claims to damages from the usage of the ValidCV platform and associated mechanisms, methods
          and software and indemnify AyeAI and its affiliates, including the original authors, from
          any liability arising out of their actions. There is no guarantee to the accuracy of the data
@@ -139,10 +139,9 @@ to Singularity!
 #### These warnings may not be removed from redistribution of this software, even if permitted by license, under any circumstances. These are to be treated as additional clauses to the license.
 
 ## Legal Notice
-ValiCV™ is a trademark of Abhishek Choudhary and others 
-carrying out business as AyeAI Consulting and allied 
-groups in India and other countries.
+#### ValiCV™ is a trademark of Abhishek Choudhary and others carrying out business as AyeAI Consulting and allied groups in India and other countries.
 
+#### The following lines till the end of this file may not be removed under any circumstances
 ```
 # AYESEC:POST_SHS('18 lines')=9da1fc9afc1b85e1e81e78a53f97d4436d886182eec170ddd6c78ec71e64113d9ade4fd1bf969ed5bbe62baed9a575d2b5e3ccdc0383c27eb7a4b6bc71965afe
 # AYESEC:STATUTORY_HEADER
