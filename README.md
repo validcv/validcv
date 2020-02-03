@@ -51,6 +51,25 @@ NOTICE: These schema may change without notice
 
 tools - automation tools
 ```
+# Internship projects
+Each country given by the ISO 2 / 3 digit country code should be supported by the tools in this project.
+Things to do
+1. Identify existing standard statistics structure
+2. Create statistics source and formatter
+3. Create dataset exploring tools (gather open access data and link to closed or paid data)
+4. Perform data analytics, apply SKHF / PoLPEST analysis
+5. Define roadmap to singularity based on above
+6. Create transalational automation for research in the domain
+7. Iff interested in the domain of the statistics, go further into its researh (patents annd publications)
+8. Create sustainable biz and operations models for the domain of the statistics towards greater glory for mankind
+9. Most importantly, be legally, socially, and ethically correct. When in doubt ASK!
+
+Potential number of projects.
+'iso country codes' x 'statistics' x 'types of analysis' x 'acad / commercial'...
+150+ x 100+ x 50+ x 2+ ...
+### Millions of projects possible... in this simple definition of ValidCV!
+### Get! Set! Go!
+
 
 ## Development notes
 NOTE: These will be captured in OSTs
