@@ -33,9 +33,13 @@ genschema() {
   do
     vcvtpath=${vcvbased}/${vcvgroup}/${p}
     mkdir -p ${vcvtpath}
-    echo "# ${vcvtpath}" >>${vcvtpath}/README.md
+    echo "# AyeAI™ cognitive tools for ${vcvbased} " >>${vcvtpath}/README.md
+    echo "## Category ${vcvgroup} " >>${vcvtpath}/README.md
+    echo "#### Function ${p} " >>${vcvtpath}/README.md
     echo "See the following URLs for copyright information" >>${vcvtpath}/README.md
+    echo "\`\`\`" >>${vcvtpath}/README.md
     cat ${vcvsrcuri} >>${vcvtpath}/README.md
+    echo "\`\`\`" >>${vcvtpath}/README.md
 
   done
 }
