@@ -34,6 +34,10 @@ tr ' ' '_' |\
 sed 's/"//g' |\
 awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'BEGIN {lc=0;plc=0;based=code;};
   /.*/ { if (NF>1) {
+          if (plc != 0) {
+            print "echo \"See the following URLs for copyright information\" >>" code "/README.md;"
+            print "cat " based "/validcv-source-" st "-" cc " >>" code "/README.md;"
+          }
           pc=code;
           plc=lc;
           lc=length($1);
@@ -53,13 +57,13 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'BEGIN {lc=0;plc=0;based=code;};
             printf "for n in {1.." plc-lc "}; do popd; done; ";
           }
           printf "mkdir -p " code ";"
+          mdh1="~ "
         }
         else {
           desc=$1
+          mdh1=""
         }
-        print "echo \"#" desc "\" | tr \"_#\" \" ,\" >>" code "/README.md;"
-        print "echo \"See the following URLs for copyright information\" >>" code "/README.md;"
-        print "cat " based "/validcv-source-" st "-" cc " >>" code "/README.md;"
+        print "echo \"" mdh1 desc "\" | tr \"_#\" \" ,\" >>" code "/README.md;"
       };
     END { print "for n in {1.." plc "}; do popd; done; " }'
   
