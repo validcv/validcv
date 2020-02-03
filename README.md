@@ -86,8 +86,12 @@ e.g. INDIA NIC - 5 digit codes
 ```
 sourcefrom http://bit.ly/validcv-ver-pplt ic in 5
 ```
+e.g. CANADA NOC - 5 digit codes
+```
+sourcefrom http://bit.ly/validcv-ver-pplt oc ca 5
+```
 
-### To enable support for a new country code
+### To enable support for a new country code or a new statistics
 1. Find the source of economic activities, or other statstics, structure
 e.g. Download WZ 2008 structure in CSV format from  https://www.klassifikationsserver.de/klassService/jsp/common/url.jsf?variant=wz2008&lang=EN (wz2008.zip) - also see UN ISIC example for CSV with 4 digit codes, and India NIC example for 5 digit codes
 
