@@ -29,7 +29,7 @@ genschema() {
     mkdir -p ${vcvtpath}
     echo "# ${vcvtpath}" >>${vcvtpath}/README.md
     echo "See the following URLs for copyright information" >>${vcvtpath}/README.md
-    cat validcv-source-${vcvbased}-${vcvgroup} >>${vcvtpath}/README.md
+    cat ${3} >>${vcvtpath}/README.md
 
   done
 }
@@ -49,7 +49,7 @@ pushd ${ver}/${2}/${3}
              "pol legal singular life txhx energy" \
              "hejlp food health edu justice livelihood habitat peace"
     do
-      genschema ${n} $(echo ${m})
+      genschema ${n} $(echo ${m}) ${vcvsrcuri}
     done
   done
 popd
