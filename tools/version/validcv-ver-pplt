@@ -35,7 +35,7 @@ genschema() {
     mkdir -p ${vcvtpath}
     echo "# ${vcvtpath}" >>${vcvtpath}/README.md
     echo "See the following URLs for copyright information" >>${vcvtpath}/README.md
-    cat ${3} >>${vcvtpath}/README.md
+    cat ${vcvsrcuri} >>${vcvtpath}/README.md
 
   done
 }
