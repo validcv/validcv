@@ -24,7 +24,8 @@ export arxiver="https://web.archive.org/web/"
 
 src_uri=${2}
 
-tmp_src=$(tempfile)
-wget -q ${arxiver}${src_uri} -O ${tmp_src}
+# TODO: This file needs to ensure the downloaded file is in standard format
+# Note: Try validcv-source-oc-ca details here for issues
+# tmp_src=$(tempfile)
 
-cat ${tmp_src}
+wget -q ${arxiver}${src_uri} -O-
