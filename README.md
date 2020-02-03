@@ -15,8 +15,7 @@ WARNING: ValidCV records are public as of this writing and we cannot offer any f
          contained in these systems, platforms and repositories.
 ```
 
-ValidCV™ is a hyperledger / blockchain based open skills validation framework
-promulgated by AyeAI™ for use with AyeLearn™ and AyeVDI™ brand offerings.
+### ValidCV™ is a hyperledger / blockchain / GitOps ref [https://www.gitops.tech/] based open skills validation framework promulgated by AyeAI™ for use with AyeLearn™ and AyeVDI™ brand offerings.
 
 ValidCV consists of a persistent repository (current workflows are based on git),
 with process automation for evaluation of skill attainment mapped to standard
