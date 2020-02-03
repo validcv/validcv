@@ -25,5 +25,5 @@ fi
 validcv_src=$(tempfile)
 validcv_src_uri=https://www150.statcan.gc.ca/n1/pub/12-583-x/12-583-x2011001-eng.pdf
 # Please refer to copyright information at https://www.statcan.gc.ca/eng/start and below URI
-wget -q ${vlidcv_src_uri} -O ${validcv_src}
+wget -q ${validcv_src_uri} -O ${validcv_src}
 cat ${validcv_src}
