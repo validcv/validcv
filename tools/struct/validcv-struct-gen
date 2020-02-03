@@ -23,10 +23,10 @@ fi
 # TODO: Major refactor - extract and harden variables as per a well defined schema across all of AyeVDI and derivatives
 
 export ver=${vcvverqual}
-if [ ! -e ${ver}/validcv-source-${2}-${3} ]
-then
-  wget -q https://bit.ly/validcv-source-${2}-${3} -O${ver}/validcv-source-${2}-${3}
-fi
+echo "if [ ! -e ${ver}/validcv-source-${2}-${3} ]"
+echo "then"
+echo "  wget -q https://bit.ly/validcv-source-${2}-${3} -O${ver}/validcv-source-${2}-${3}"
+echo "fi"
 
 # The following portion is the filter
 tail +2 |\
