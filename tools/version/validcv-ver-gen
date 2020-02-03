@@ -22,4 +22,4 @@ fi
 sourcefrom http://bit.ly/validcv-ver-base
 ver=${ver}/${2}/${3}
 mkdir -p ${ver}
-sourcefrom https://bit.ly/validcv-format-gen ${2} ${3} | sourcefrom https://bit.ly/validcv-struct-gen 
+sourcefrom https://bit.ly/validcv-format-gen ${2} ${3} | sourcefrom https://bit.ly/validcv-struct-gen ${2} ${3}
