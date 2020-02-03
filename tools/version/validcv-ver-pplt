@@ -28,11 +28,15 @@ genschema() {
     vcvtpath=${vcvbased}/${vcvgroup}/${p}
     mkdir -p ${vcvtpath}
     echo "# ${vcvtpath}" >>${vcvtpath}/README.md
+    echo "See the following URLs for copyright information" >>${vcvtpath}/README.md
+    cat validcv-source-${vcvbased}-${vcvgroup} >>${vcvtpath}/README.md
+
   done
 }
 
 sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3} | . /dev/stdin
 pushd ${ver}/${2}/${3}
+  wget -q https://bit.ly/validcv-source-${2}-${3}
   for n in $(find . -mindepth ${4} -type d | grep -v '^.$')
   do
     for m in "sense vision nlp iot analytics" \
