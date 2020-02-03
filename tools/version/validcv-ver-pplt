@@ -42,7 +42,7 @@ genschema() {
 
 sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3} | . /dev/stdin
 pushd ${ver}/${2}/${3}
-  export vcvsrcuri=${ver}/${2}/${3}validcv-source-${2}-${3}
+  export vcvsrcuri=${PWD}/${ver}/${2}/${3}validcv-source-${2}-${3}
   wget -q https://bit.ly/validcv-source-${2}-${3} -O${vcvsrcuri}
   for n in $(find . -mindepth ${4} -type d | grep -v '^.$')
   do
