@@ -47,7 +47,9 @@ awk -F',' -vcode=$ver 'BEGIN {lc=0;plc=0;};
         else {
           desc=$1
         }
-        print "echo \"" desc "\" | tr \"_#\" \" ,\" >>" code "/README.md;"
+        print "echo \"#" desc "\" | tr \"_#\" \" ,\" >>" code "/README.md;"
+        print "echo \"See the following URLs for copyright information\" >>" code "/README.md;"
+        print "wget -O- -q https://bit.ly/validcv-source-" ${2} "-" ${3} " >>" code "/README.md;"
       };
   END { print "for n in {1.." plc "}; do popd; done; " }'
   
