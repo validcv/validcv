@@ -129,13 +129,14 @@ cloud based AI and analytics experience. Do try our experimental "systhesis" fea
 point of custom "CEMs™ Neuromorphic Quantum Accelerator" - looking forward to your support and participation in the journey
 to Singularity!
 
-# WARNING: Please do not distribute any material where the Copyright information provided is not clear about the rights of distribution, or without permission where one is required. Users may be given directions to manually download the specific object on their own. This defeats automation, however, the original providers legal rights are maintained.
+### WARNING: 
+#### Please do not distribute any material where the Copyright information provided is not clear about the rights of distribution, or without permission where one is required. Users may be given directions to manually download the specific object on their own. This defeats automation, however, the original providers legal rights are maintained.
 
-# WARNING: Please do not share any sensitive personal information. This project is experimntal and we cannot guarantee any compliance of data protection such as GDPR. As of now we are also unable to assure removal of personal data. Please rest assured this is topmost priority and is one of the first avenues of investment, endowment, funding or donation.
+#### Please do not share any sensitive personal information. This project is experimntal and we cannot guarantee any compliance of data protection such as GDPR. As of now we are also unable to assure removal of personal data. Please rest assured this is topmost priority and is one of the first avenues of investment, endowment, funding or donation.
 
-# WARNING: This is an experimental system and cannot guarantee any level of accuracy or SLA. The results may be inaccurate and must never be used for any critical or life saving purpose or for any economic activity. The users use this software at their own risk and indemnify the original authors against any losses incurred directly or indirectly by them or by any other 3rd party, including the loss of mental peace, as a result of using this software.
+#### This is an experimental system and cannot guarantee any level of accuracy or SLA. The results may be inaccurate and must never be used for any critical or life saving purpose or for any economic activity. The users use this software at their own risk and indemnify the original authors against any losses incurred directly or indirectly by them or by any other 3rd party, including the loss of mental peace, as a result of using this software.
 
-# WARNING: These warnings may not be removed from redistribution of this software, if permitted by license, under any circumstances.
+#### These warnings may not be removed from redistribution of this software, even if permitted by license, under any circumstances. These are to be treated as additional clauses to the license.
 
 ## Legal Notice
 ValiCV™ is a trademark of Abhishek Choudhary and others 
