@@ -25,15 +25,12 @@ git clone https://github.com/validcv/validcv ${HOME}/.validcv/validcv
 
 pushd ${HOME}/.validcv/validcv/tools/version
 
-tmpscript=$(tempfile)
+  tmpscript=$(tempfile)
+  cat validcv-ver-curr | awk -F'=' date="$(date +%Y%m%d)" '/export vcvvercurr/ {print $1 + date;next};
+                                                           /.*/ {print}' >${tmpscript}
+  cp -f ${tmpscript} ${HOME}/.validcv/validcv/tools/version/validcv-ver-curr
 
-cat validcv-ver-curr | awk -F'=' date="$(date +%Y%m%d)" '/export vcvvercurr/ {print $1 + date;next};
-                                                         /.*/ {print}' >${tmpscript}
-                                                         
-cp -f ${tmpscript} ${HOME}/.validcv/validcv/tools/version/validcv-ver-curr
-
-git add validcv-ver-curr
-
-git commit -m "Bumped version to $(date +%Y%m%d)"
-
-git push
+  git add validcv-ver-curr
+  git commit -m "Bumped version to $(date +%Y%m%d)"
+  git push
+popd
