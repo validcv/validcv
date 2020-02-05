@@ -84,4 +84,5 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
   # TODO: Remove awk script into separate file
   
   # TODO: Identify nuances across coding paradigms such as awk 'space between fxname and ('
+  # Note: These nuances make understanding code difficult and more importantly prevent multi-paradigm coding
   
