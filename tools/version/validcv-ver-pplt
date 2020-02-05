@@ -44,7 +44,7 @@ genschema() {
   done
 }
 
-sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3} | . /dev/stdin
+$(sourcefrom http://bit.ly/validcv-ver-gen ${2} ${3})
 
 sourcefrom http://bit.ly/validcv-ver-base
 pushd ${vcvverbase}/${2}/${3}
