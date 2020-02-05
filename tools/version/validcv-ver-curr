@@ -22,3 +22,4 @@ fi
 export vcvvercurr=20200202
 
 echo ${vcvvercurr}
+
