@@ -33,7 +33,7 @@ echo "fi"
 tail +2 |\
 tr ' ' '_' |\
 sed 's/"//g' |\
-awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info (code,based,st,cc) {
+awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) {
     print "echo \"#### See the following URLs for copyright information\" >>" code "/README.md;"
     print "echo \"\\`\\`\\`\" >>" code "/README.md;"
     print "cat " based "/validcv-source-" st "-" cc " >>" code "/README.md;"
@@ -43,14 +43,14 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info (code,based,st,cc)
           plc=0;
           based=code
         };
-  /.*/ { if (NF>1) {
+  /.*/ { if(NF>1) {
            if(pc != code) {
-             cp_info (code,based,st,cc);
+             cp_info(code,based,st,cc);
            }
            pc=code;
            plc=lc;
            lc=length($1);
-           if (NF==2) {
+           if(NF==2) {
              code=$1;
              desc=$2;
            }
@@ -59,10 +59,10 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info (code,based,st,cc)
              desc=$3;
            }
            print "# fields="NF " len=" lc " code=" code;
-           if (plc<lc) {
+           if(plc<lc) {
              print "pushd " pc "; ";
            }
-           if (plc>lc) {
+           if(plc>lc) {
              print "for n in {1.." plc-lc "}; do popd; done; ";
            }
            print "mkdir -p " code ";"
@@ -75,11 +75,13 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info (code,based,st,cc)
          print "echo \"" mdh1 desc "\" | tr \"_#~\" \" ,#\" >>" code "/README.md;"
        };
   END {
-      cp_info (code,based,st,cc);
+      cp_info(code,based,st,cc);
       print "for n in {1.." lc "}; do popd; done; "
   }'
   
   # TODO: Check for errors
   # TODO: Improve coding structure
   # TODO: Remove awk script into separate file
+  
+  # TODO: Identify nuances across coding paradigms such as awk 'space between fxname and ('
   
