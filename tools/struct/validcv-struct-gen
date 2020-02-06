@@ -23,7 +23,7 @@ fi
 # TODO: Major refactor - extract and harden variables as per a well defined schema across all of AyeVDI and derivatives
 
 export ver=${vcvverqual}
-echo "# Auto-generated code @" $(date +%s)
+echo "# Auto-generated code @$(date +%s)"
 echo "# Legal Notice: Distribution in any form PROHIBITED. Do NOT distribute. DELETE THIS FILE"
 echo "# Contact original source data copyright holders to obtain right to distribute"
 echo "# Where there is ambiguity to the copyright holder, presume distribution is explicitly barred or disallowed"
