@@ -112,8 +112,8 @@ tee >( grep '^#.*record=' |\
               print "# AyeDS:Reference:Records' counts " $1 " " $2;
             }';
      )\
-    >( tee >( grep '^# header' | expr $(wc -l) + 1)\
-            >( grep '^# Copyright.* source' | wc -l |\
+    >( tee >( grep '^# header' | expr $(wc -l) + 1 )\
+           >( grep '^# Copyright.* source' | wc -l ) |\
        tail -2 |\
        tr '\n' ' ' |\
        awk '{ if($1 != $2) {
