@@ -58,7 +58,7 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
              code=$2;
              desc=$3;
            }
-           print "\n# record=" NR " fields=" NF " len=" lc " code=" code;
+           print "\n# record=" NR " fields=" NF " len=" lc " code=" code " prev_len=" plc " prev_code" pc;
            if(plc<lc) {
              print "pushd " pc "; ";
            }
