@@ -79,13 +79,20 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
       print "for n in {1.." lc "}; do popd; done; "
   }'
   
-  # TODO: Check for errors
-  # TODO: Improve coding structure
-  # TODO: Remove awk script into separate file
-  
-  # TODO: Identify nuances across coding paradigms such as awk 'space between fxname and ('
-  # Note: These nuances make understanding code difficult and more importantly prevent multi-paradigm coding
-  
-  # Ref:
-  # http://web.archive.org/web/20190619230236/https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms
+# TODO: Check for errors
+# TODO: Improve coding structure
+# TODO: Remove awk script into separate file
+
+# TODO: Identify nuances across coding paradigms such as awk 'space between fxname and ('
+# Note: These nuances make understanding code difficult and more importantly prevent multi-paradigm coding
+
+# TODO:
+# Notice: Providing an external link does imply endorsement
+# Warning: This is not an invitation to purchase any products. Users / readers may do so at their own risk
+
+# Ref:
+# Comparision of programming paradigms - as of the following record the article is pretty informative
+# http://web.archive.org/web/20190619230236/https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms
+# A nice compendium on Awk
+# https://web.archive.org/web/20180623082305/https://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/
   
