@@ -69,7 +69,7 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
            mdh1="~ " code " ";
          }
          else {
-           print "\n# body record=" NR " fields=" NF " len=" lc " code=" code " prev_len=" plc " prev_code=" pc;
+           print "## body record=" NR " fields=" NF " len=" lc " code=" code " prev_len=" plc " prev_code=" pc;
            desc=$1
            mdh1=""
          }
