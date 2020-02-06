@@ -29,11 +29,13 @@ echo "# Contact original source data copyright holders to obtain right to distri
 echo "# Where there is ambiguity to the copyright holder, presume distribution is explicitly barred or disallowed"
 echo "# Disclaimer: The content of the script pertains to copyrighted material from 3rd party sources"
 echo "# Delete this script and do not use it further if you do not agree with the notices herein"
-echo "# Use it is at your own risk. NO WARRANTY, and ZERO LIABILITY (Limited to INR 1/- only)"
-echo "# By using this file or script you explicitly agree to indemnify the original authors,"
-echo "# against any losses to yourself or any 3rd party."
-echo "# Each of the clauses of the legal notices appearing here are to be treated independently, and"
-echo "# repungency or inapplicability of a clause does not invalidate others"
+echo "# You MAY use these at your own risk. NO WARRANTY, and ZERO LIABILITY (Limited to INR 1/- only)"
+echo "# By using these files or scripts you explicitly agree to indemnify the original authors,"
+echo "# against any losses to yourself or any 3rd party. Do NOT use FOR ANY CRITICAL PURPOSE"
+echo "# Each of the clauses of the legal notices appearing herein are to be treated independently, AND"
+echo "# repungency or inapplicability, otherwise, of a clause does not invalidate other clauses."
+echo "# Clauses of AyeAI SPL hold as far as applicable under the law of the land."
+echo "# Disputes are subject to the jurisdiction of courts in Hyderabad, Telangana, India only"
 wget -O- -q https://bit.ly/validcv-struct-gen | head -20
 # TODO: Capture auto generated code notices into an OST
 
