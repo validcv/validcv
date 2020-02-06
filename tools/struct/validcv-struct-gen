@@ -109,7 +109,7 @@ tee >( grep '^#.*record=' |\
               else {
                 print "# AyeDS:SUCCESS:Internal validation succeeded records count";
               }
-              print "# AyeDS:Reference:Records' counts " $1 " " $2;
+              print "# AyeDS:Reference:Records count " $1 " " $2;
             }';
      )\
     >( tee >( grep '^# header' | expr $(wc -l) + 1 )\
@@ -122,7 +122,7 @@ tee >( grep '^#.*record=' |\
               else {
                 print "# AyeDS:SUCCESS:Internal validation succeeded notices count";
               }
-              print "# AyeDS:Reference:Notices' counts " $1 " " $2;
+              print "# AyeDS:Reference:Notices count " $1 " " $2;
             }';
      )
   
