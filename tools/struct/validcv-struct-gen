@@ -91,14 +91,27 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
 # Notice: Providing an external link does imply endorsement
 # Warning: This is not an invitation to purchase any products. Users / readers may do so at their own risk
 
-# Note: There is a quirk in GNU Awk v4.1.4 as available in Ubuntu 18.04 LTS as on 6-Feb-2020
+# Note: There appears to be a quirk in GNU Awk v4.1.4 as available in Ubuntu 18.04 LTS as on 6-Feb-2020
 # Set two strings to any length of 0 (zeros) and they will compare equal! Expected behaviour?
-# Try: awk '{code=$1; pc=$2; if(pc!=code) {print "NE"} else {print "EQ"}}'
+# Try:
+#   awk '{code=$1; pc=$2; printf code; if(pc!=code) {printf " NE "} else {printf " EQ "}; print pc}'
 # Test inputs:
 # 0 00
 # 00 000
 # 00 0
+# "0" "00"
+# The explicitly quoted strings work, the quotes are part of the string!
 # TODO: Check the above behaviour in other untyped languages
+# JS appears to deal with this diffently, at least in Chrome
+# Try:
+#   <html><body>
+#     <p id="result"></p>
+#     <script>
+#       var code = "0";
+#       var pc = "00";
+#       document.getElementById("result").innerHTML = code + ((pc != code)?" NE ":" EQ ") + pc
+#     </script>
+#   </body></html>
 
 # Ref:
 # Comparision of programming paradigms - as of the following record the article is pretty informative
