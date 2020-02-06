@@ -23,6 +23,12 @@ fi
 # TODO: Major refactor - extract and harden variables as per a well defined schema across all of AyeVDI and derivatives
 
 export ver=${vcvverqual}
+echo "# Auto-generated code @" $(date +%s)
+echo "# Legal Notice: Distribution in any form PROHIBITED. Do NOT distribute. DELETE THIS FILE"
+echo "# Contact copyright holders for right to distribute"
+echo "# Disclaimer: The content of the script pertains to copyrighted material from 3rd party sources"
+echo "# Delete this script and do not use it further if you do not agree with the notices herein"
+echo "# Using it is at your own risk. NO WARRANTY, and ZERO LIABILITY (Limited to INR 1/- only)" 
 echo "if [ ! -e ${ver}/validcv-source-${2}-${3} ]"
 echo "then"
 echo "  mkdir -p ${ver}"
@@ -75,10 +81,9 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
          }
          print "echo \"" mdh1 desc "\" | tr \"_#~\" \" ,#\" >>" code "/README.md;"
        };
-  END {
-      cp_info(code,based,st,cc);
-      print "for n in {1.." lc "}; do popd; done; "
-  }'
+  END { cp_info(code,based,st,cc);
+        print "for n in {1.." lc "}; do popd; done; "
+      }'
   
 # TODO: Check for errors
 # TODO: Improve coding structure
