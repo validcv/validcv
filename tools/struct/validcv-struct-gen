@@ -34,7 +34,7 @@ echo "# By using these files or scripts you explicitly agree to indemnify the or
 echo "# against any losses to yourself or any 3rd party. Do NOT use FOR ANY CRITICAL PURPOSE"
 echo "# Each of the clauses of the legal notices appearing herein are to be treated independently, AND"
 echo "# repungency or inapplicability, otherwise, of a clause does not invalidate other clauses."
-echo "# Clauses of AyeAI SPL hold as far as applicable under the law of the land."
+echo "# Clauses of AyeAI SPL hold as far as applicable under the applicable laws of the Republic of India."
 echo "# Disputes are subject to the jurisdiction of courts in Hyderabad, Telangana, India only"
 wget -O- -q https://bit.ly/validcv-struct-gen | head -20
 # TODO: Capture auto generated code notices into an OST
