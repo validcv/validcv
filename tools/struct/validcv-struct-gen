@@ -41,10 +41,10 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
   }
   BEGIN { lc=0;
           plc=0;
-          based=code
+          based=code;
         };
   /.*/ { if(NF>1) {
-           if(pc != code) {
+           if(pc != code || plc!=lc) {
              cp_info(code,based,st,cc);
            }
            pc=code;
@@ -90,6 +90,15 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
 # TODO: Figure out a way to allow Extreme Literate Programming(TM) within the legal framework of AyeAI SPL
 # Notice: Providing an external link does imply endorsement
 # Warning: This is not an invitation to purchase any products. Users / readers may do so at their own risk
+
+# Note: There is a quirk in GNU Awk v4.1.4 as available in Ubuntu 18.04 LTS as on 6-Feb-2020
+# Set two strings to any length of 0 (zeros) and they will compare equal! Expected behaviour?
+# Try: awk '{code=$1; pc=$2; if(pc!=code) {print "NE"} else {print "EQ"}}'
+# Test inputs:
+# 0 00
+# 00 000
+# 00 0
+# TODO: Check the above behaviour in other untyped languages
 
 # Ref:
 # Comparision of programming paradigms - as of the following record the article is pretty informative
