@@ -109,7 +109,7 @@ tee >( grep '^#.*record=' |\
               else {
                 print "# AyeDS:SUCCESS:Internal validation succeeded records count";
               }
-              print "# AyeDS:Reference:Input records " $1 " Processed records " $2;
+              print "# AyeDS:Reference:Records count mismatch " $1 " " $2;
             }';
      )
   
