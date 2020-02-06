@@ -25,7 +25,8 @@ fi
 export ver=${vcvverqual}
 echo "# Auto-generated code @" $(date +%s)
 echo "# Legal Notice: Distribution in any form PROHIBITED. Do NOT distribute. DELETE THIS FILE"
-echo "# Contact original source data copyright holders, such as GoI or UN, to obtain right to distribute"
+echo "# Contact original source data copyright holders to obtain right to distribute"
+echo "# Where there is ambiguity to the copyright holder, presume distribution is explicitly barred or disallowed"
 echo "# Disclaimer: The content of the script pertains to copyrighted material from 3rd party sources"
 echo "# Delete this script and do not use it further if you do not agree with the notices herein"
 echo "# Use it is at your own risk. NO WARRANTY, and ZERO LIABILITY (Limited to INR 1/- only)"
