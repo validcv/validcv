@@ -46,7 +46,7 @@ tail +2 |\
 tr ' ' '_' |\
 sed 's/"//g' |\
 awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) {
-    print "echo \"#### See the following URLs for copyright information\" >>" code "/README.md;"
+    print "echo \"#### See the following URLs for content copyright information\" >>" code "/README.md;"
     print "echo \"\\`\\`\\`\" >>" code "/README.md;"
     print "cat " based "/validcv-source-" st "-" cc " >>" code "/README.md;"
     print "echo \"\\`\\`\\`\" >>" code "/README.md;"
