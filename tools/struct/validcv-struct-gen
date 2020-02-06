@@ -34,6 +34,7 @@ echo "# By using this file or script you explicitly agree to indemnify the origi
 echo "# against any losses to yourself or any 3rd party."
 echo "# Each of the clauses of the legal notices appearing here are to be treated independently, and"
 echo "# repungency or inapplicability of a clause does not invalidate others"
+wget -O- -q https://bit.ly/validcv-struct-gen | head -20
 # TODO: Capture auto generated code notices into an OST
 echo "if [ ! -e ${ver}/validcv-source-${2}-${3} ]"
 echo "then"
