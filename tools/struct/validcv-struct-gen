@@ -109,7 +109,20 @@ tee >( grep '^#.*record=' |\
               else {
                 print "# AyeDS:SUCCESS:Internal validation succeeded records count";
               }
-              print "# AyeDS:Reference:Records count mismatch " $1 " " $2;
+              print "# AyeDS:Reference:Records' counts " $1 " " $2;
+            }';
+     )\
+    >( tee >( grep '^# header' | expr $(wc -l) + 1)\
+            >( grep '^# Copyright.* source' | wc -l |\
+       tail -2 |\
+       tr '\n' ' ' |\
+       awk '{ if($1 != $2) {
+                print "echo \"AyeDS:ERROR:Internal validation failed notices count\"";
+              }
+              else {
+                print "# AyeDS:SUCCESS:Internal validation succeeded notices count";
+              }
+              print "# AyeDS:Reference:Notices' counts " $1 " " $2;
             }';
      )
   
