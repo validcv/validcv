@@ -143,7 +143,7 @@ to Singularity!
 #### These warnings may not be removed from redistribution of this software, even if permitted by license, under any circumstances. These are to be treated as additional clauses to the license.
 
 ## Legal Notice
-#### ValiCV™ is a trademark of Abhishek Choudhary and others carrying out business as AyeAI Consulting and allied groups in India and other countries.
+#### ValidCV™ is a trademark of Abhishek Choudhary and others carrying out business as AyeAI Consulting and allied groups in India and other countries.
 
 #### The following lines till the end of this file may not be removed under any circumstances
 ```
