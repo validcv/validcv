@@ -86,13 +86,15 @@ awk -F',' -vcode=${ver} -vst=${2} -vcc=${3} 'function cp_info(code,based,st,cc) 
            }
            print "mkdir -p " code ";"
            mdh1="~ " code " ";
+           sty1=""
          }
          else {
            print "## body record=" NR " fields=" NF " len=" lc " code=" code " prev_len=" plc " prev_code=" pc;
            desc=$1
            mdh1=""
+           sty1="<br>"
          }
-         print "echo \"" mdh1 desc "\" | tr \"_#~\" \" ,#\" >>" code "/README.md;"
+         print "echo \"" mdh1 desc sty1 "\" | tr \"_#~\" \" ,#\" >>" code "/README.md;"
        };
   END { cp_info(code,based,st,cc);
         print "for n in {1.." lc "}; do popd; done; "
